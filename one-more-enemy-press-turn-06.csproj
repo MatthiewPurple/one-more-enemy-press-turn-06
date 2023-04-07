@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>one_more_enemy_press_turn_bosses_only_06</RootNamespace>
-    <AssemblyName>one_more_enemy_press_turn_bosses_only_06</AssemblyName>
+    <RootNamespace>one_more_enemy_press_turn_normal_battles_only_06</RootNamespace>
+    <AssemblyName>one_more_enemy_press_turn_normal_battles_only_06</AssemblyName>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
