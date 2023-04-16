@@ -34,7 +34,7 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         {
             foreach (datUnitWork_t item in nbMainProcess.nbGetMainProcessData().enemyunit)
             {
-                if (item.id >= 256) return true; // All bosses have an ID of at least 256
+                if (item.id >= 256 && item.id != 318 && item.id != 319) return true; // All bosses have an ID of at least 256
             }
 
             return false;
