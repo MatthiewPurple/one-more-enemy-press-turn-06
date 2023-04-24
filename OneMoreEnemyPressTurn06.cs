@@ -27,6 +27,14 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         }
     }
 
+    static public List<ushort> fakeBosses = new List<ushort>()
+    {
+        318, // Will o' Wisp (Tutorial)
+        319, // Preta (Tutorial)
+        260, // Incubus (Nihilo)
+        261  // Koppa Tengu (Nihilo)
+    };
+
     private class Utility
     {
         // Checks if there is a boss on the enemy's side
@@ -34,7 +42,7 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         {
             foreach (datUnitWork_t item in nbMainProcess.nbGetMainProcessData().enemyunit)
             {
-                if (item.id >= 256 && item.id != 318 && item.id != 319) return true; // All bosses have an ID of at least 256
+                if (item.id >= 256 && !fakeBosses.Contains(item.id)) return true; // All bosses have an ID of at least 256 (with a few exceptions)
             }
 
             return false;
