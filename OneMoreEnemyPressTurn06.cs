@@ -42,7 +42,7 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         {
             foreach (datUnitWork_t item in nbMainProcess.nbGetMainProcessData().enemyunit)
             {
-                if (item.id >= 256 && !fakeBosses.Contains(item.id)) return true; // All bosses have an ID of at least 256 (with a few exceptions)
+                if (item.id >= 256 && item.hp != 0 && !fakeBosses.Contains(item.id)) return true; // All bosses have an ID of at least 256 (with a few exceptions)
             }
 
             return false;
