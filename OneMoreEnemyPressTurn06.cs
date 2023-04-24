@@ -32,7 +32,8 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         318, // Will o' Wisp (Tutorial)
         319, // Preta (Tutorial)
         260, // Incubus (Nihilo)
-        261  // Koppa Tengu (Nihilo)
+        261, // Koppa Tengu (Nihilo)
+        313  // Succubus (Nihilo)
     };
 
     private class Utility
@@ -42,7 +43,11 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         {
             foreach (datUnitWork_t item in nbMainProcess.nbGetMainProcessData().enemyunit)
             {
-                if (item.id >= 256 && item.hp != 0 && !fakeBosses.Contains(item.id)) return true; // All bosses have an ID of at least 256 (with a few exceptions)
+                // If it's an actual boss (and not a mini-boss) who's still alive
+                if (item.id >= 256 && item.hp != 0 && !fakeBosses.Contains(item.id)) return true;
+
+                // Special case for Succubus (313) because she gets only the additional press turn ONLY when she's alone (not as Berith's ally)
+                if (item.id == 313 && item.hp != 0 && nbMainProcess.nbGetMainProcessData().enemyunit.Length == 1) return true;
             }
 
             return false;
