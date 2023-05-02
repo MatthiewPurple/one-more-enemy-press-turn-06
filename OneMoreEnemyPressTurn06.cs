@@ -33,7 +33,11 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         319, // Preta (Tutorial)
         260, // Incubus (Nihilo)
         261, // Koppa Tengu (Nihilo)
-        313  // Succubus (Nihilo)
+        313, // Succubus (Nihilo)
+        359, // Virtue (White Rider)
+        360, // Power (Red Rider)
+        361, // Legion (Black Rider)
+        358  // Loa (Pale Rider)
     };
 
     private class Utility
