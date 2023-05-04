@@ -40,12 +40,6 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         358  // Loa (Pale Rider)
     };
 
-    // List of enemies with an ID lower than 256 but are bosses
-    static public List<ushort> trueBosses = new List<ushort>()
-    {
-        117 // Succubus (Chest boss)
-    };
-
     private class Utility
     {
         // Checks if there is a boss on the enemy's side
@@ -54,7 +48,10 @@ public class OneMoreEnemyPressTurn06 : MelonMod
             foreach (datUnitWork_t item in nbMainProcess.nbGetMainProcessData().enemyunit)
             {
                 // If it's an actual boss (and not a mini-boss) who's still alive
-                if (((item.id >= 256 && !fakeBosses.Contains(item.id)) || trueBosses.Contains(item.id)) && item.hp != 0) return true;
+                if (item.id >= 256 && !fakeBosses.Contains(item.id) && item.hp != 0) return true;
+
+                // Special case for the Succubus chest boss
+                else if (item.id == 117 && nbMainProcess.nbGetMainProcessData().encno == 990) return true;
             }
 
             return false;
