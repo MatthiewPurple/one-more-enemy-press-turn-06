@@ -37,7 +37,11 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         359, // Virtue (White Rider)
         360, // Power (Red Rider)
         361, // Legion (Black Rider)
-        358  // Loa (Pale Rider)
+        358, // Loa (Pale Rider)
+        279, // Urthona
+        280, // Urizen
+        281, // Luvah
+        282  // Tharmus
     };
 
     private class Utility
