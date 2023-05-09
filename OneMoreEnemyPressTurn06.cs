@@ -52,7 +52,7 @@ public class OneMoreEnemyPressTurn06 : MelonMod
             foreach (datUnitWork_t item in nbMainProcess.nbGetMainProcessData().enemyunit)
             {
                 // If it's an actual boss (and not a mini-boss) who's still alive
-                if (item.id >= 256 && !fakeBosses.Contains(item.id) && item.hp != 0) return true;
+                if (item.id >= 256 && item.id < 362 && !fakeBosses.Contains(item.id) && item.hp != 0) return true;
 
                 // Special case for the Succubus chest boss
                 else if (item.id == 117 && nbMainProcess.nbGetMainProcessData().encno == 990) return true;
