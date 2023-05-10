@@ -41,7 +41,9 @@ public class OneMoreEnemyPressTurn06 : MelonMod
         279, // Urthona
         280, // Urizen
         281, // Luvah
-        282  // Tharmus
+        282, // Tharmus
+        290, // Flauros Hallel
+        289  // Ose Hallel
     };
 
     private class Utility
