@@ -20,8 +20,8 @@ public class OneMoreEnemyPressTurn06 : MelonMod
             // If that demon is an enemy and the enemies don't already have 8 press turns
             if (activeunit >= 4 && nbMainProcess.nbGetMainProcessData().press4_p < 8)
             {
-                nbMainProcess.nbGetMainProcessData().press4_p++; // Add 1 full press turn
-                nbMainProcess.nbGetMainProcessData().press4_ten++; // Add 1 total press turn
+                nbMainProcess.nbGetMainProcessData().press4_p = 8; // Set 8 full press turn
+                nbMainProcess.nbGetMainProcessData().press4_ten = 8; // Set 8 total press turn
             }
         }
     }
